@@ -1,0 +1,44 @@
+.container {
+  width: 100%;
+  min-height: 90vh;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #003879;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+
+  .welcome{
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+  }
+
+  .formContainer{
+    font-weight: 400;
+    .field{
+      margin-bottom: 20px;
+      .title{
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+      }
+      .input{
+      
+        font-size: 1.1rem;
+      }
+    }
+    .btn {
+      cursor: pointer;
+      margin-top: 40px;
+      background-color: #68afff;
+      padding: 10px;
+      border-radius: 5px;
+
+      &:hover{
+        background-color: #487db9;
+      }
+    }
+  }
+}
