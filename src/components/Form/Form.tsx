@@ -1,7 +1,6 @@
 import React, { ReactElement, useState } from 'react'
 import styles from './Form.module.scss'
 import SweetAlert from 'sweetalert2-react';
-import axios from 'axios';
 
 const Form = () : ReactElement => {
   const [name, setName] = useState<string>('')
