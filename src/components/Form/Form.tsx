@@ -1,6 +1,7 @@
 import React, { ReactElement, useState } from 'react'
 import styles from './Form.module.scss'
 import SweetAlert from 'sweetalert2-react';
+import axios from 'axios'
 
 const Form = () : ReactElement => {
   const [name, setName] = useState<string>('')
@@ -8,11 +9,19 @@ const Form = () : ReactElement => {
   const [last, setLast] = useState<string>('')
   const [show, setShow] = useState<boolean>(false)
 
-  const postData = (first : string, last : string) =>{
-    setName(`${first} ${last}`)
+  const postData = async (first : string, last : string) =>{
+    const payload = {
+      first,
+      last
+    }
+
+    const { data : { name }} = await axios.post('https://uts-tst.azurewebsites.net/api/HttpTriggerUTS', payload)
+    
+    setName(name)
     setFirst('')
     setLast('')
     setShow(true)
+    
   }
   
   return (
