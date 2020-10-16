@@ -7,6 +7,12 @@ const Header = () : ReactElement => {
       <div className={styles.title}>
         UTS Teknologi Sistem Terintegrasi II3160
       </div>
+      <div className={styles.title}>
+        Muhammad Xavier Rafifsyah Prasetyo
+      </div>
+      <div className={styles.title}>
+        18218040
+      </div>
     </div>
   )
 }
